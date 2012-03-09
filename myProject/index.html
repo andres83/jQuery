@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Origenes</title>
+        
+        <link href="css/origenes.css" rel="stylesheet" type="text/css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<style type="text/css">
+		</style>
+		<script>
+$(document).ready(function() {
+    var contenedor;
+    contenedor=$("html").css('height');
+    var alto0;
+    var ancho0;
+    var arriba0;
+    var izquierda0;
+    alto0 = $(".container").css('height');
+    ancho0 = $(".container").css('width');
+    arriba0=parseInt(contenedor)/2-parseInt(alto0)/2;
+    izquierda0=parseInt(contenedor)/2-parseInt(ancho0)/2;
+    var alto1;
+    var ancho1;
+    var arriba1;
+    var izquierda1;
+    alto1 = parseInt(alto0)/2;
+    ancho1 = parseInt(ancho0)/2;
+    arriba1=parseInt(contenedor)/2-parseInt(alto1)/2;
+    izquierda1=parseInt(contenedor)/2-parseInt(ancho1)/2;
+    $(".container").hover(function () {
+        $(this).animate({width:ancho1, height:alto1, left:izquierda1, top:arriba1});
+    },function () {
+        $(this).animate({width:ancho0, height:alto0, left:izquierda0, top:arriba0});
+    });
+});
+		</script>
+
+    </head>
+<body>
+    <div class="container">
+        <img src="imagenes/gal0.jpg">
+    </div>
+
+</body>
+
+</html>
