@@ -87,7 +87,7 @@ $(document).ready(function(){
 	$('#slideInner').css('width', slideWidth * numberOfSlides);
 	
 	// Inserta el espacio de los botones
-	$('#slideshow').append("<div id='navslider'></div>");
+	$('#slideInner').after("<div id='navslider'></div>");
   
 	//crea el numero de botones por imagen
 	slides.each(function(index) {
@@ -98,9 +98,9 @@ $(document).ready(function(){
 	});
 	
 	// agrega funcion para actualización de estado de los botones
-	$('#slideshow .myClass').bind('click',function(){
+	$('.myClass').bind('click',function(){
 	
-		currentPosition=$('#slideshow .myClass').index($(this));
+		currentPosition=$('.myClass').index($(this));
 		
 		updatePosition();
 	});
